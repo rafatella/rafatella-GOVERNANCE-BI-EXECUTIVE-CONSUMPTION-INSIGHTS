@@ -80,34 +80,6 @@ Exemplos de perfis monitorados:
 
 Usuários técnicos ou equipe de BI **não entram no cálculo**.
 
----
 
-## 🧩 Modelagem do Projeto
 
-### **Fato Principal**
-`BD_VISÕES_BI`
-- ID VISÃO  
-- VISÃO  
-- RESPONSÁVEL  
-- DATA  
-- USUÁRIO  
-- EMAIL  
-- VIEWS  
 
-### **Dimensões**
-`LIST` – Metadados dos painéis (Data_Inicio, Responsável)  
-`d_calendario_bi` – Tabela calendário corporativa  
-
-### **Relacionamentos**
-- `BD_VISÕES_BI[DATA]` → `d_calendario_bi[Date]`
-- `BD_VISÕES_BI[ID VISÃO]` → `LIST[ID VISÃO]`
-
----
-
-## 🧠 Lógica Avançada de Cálculo
-
-### ✔ Janela móvel com base na **última data registrada**
-
-```DAX
-VAR DataReferencia = CALCULATE(MAX('BD_VISÕES_BI'[DATA]))
-VAR DataInicial = DataReferencia - 7
