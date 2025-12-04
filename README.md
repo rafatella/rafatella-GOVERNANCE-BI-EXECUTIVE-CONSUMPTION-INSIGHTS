@@ -1,4 +1,3 @@
-# rafatella-GOVERNANCE-BI-EXECUTIVE-CONSUMPTION-INSIGHTS
 # GOVERNANCE & BI EXECUTIVE CONSUMPTION INSIGHTS  
 ### Monitoramento de Engajamento Exclusivo dos Gestores
 
